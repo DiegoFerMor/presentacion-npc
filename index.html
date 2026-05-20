@@ -516,7 +516,8 @@
                 <div class="mt-32 flex flex-wrap justify-center items-center gap-16 md:gap-24 lg:gap-32 reveal">
                     <img src="./logos/logo_seom.png" alt="SEOM" class="h-24 md:h-32 lg:h-36 w-auto drop-shadow-md opacity-90" onerror="this.src='https://placehold.co/350x150/transparent/610f2f?text=Aval+SEOM'">
                     <img src="./logos/logo_ttcc.png" alt="TTCC" class="h-24 md:h-32 lg:h-36 w-auto drop-shadow-md opacity-90" onerror="this.src='https://placehold.co/350x150/transparent/610f2f?text=Aval+TTCC'">
-                    <img src="./logos/logo_cfc.png" alt="CFC SNS" class="h-20 md:h-28 lg:h-32 w-auto drop-shadow-md opacity-90" onerror="this.src='https://placehold.co/350x150/transparent/610f2f?text=Acreditación+CFC+SNS'">
+                    <!-- SE CORRIGE LA EXTENSION DE LA CFC A .PNG MAYÚSCULAS -->
+                    <img src="./logos/logo_cfc.PNG" alt="CFC SNS" class="h-20 md:h-28 lg:h-32 w-auto drop-shadow-md opacity-90" onerror="this.src='https://placehold.co/350x150/transparent/610f2f?text=Acreditación+CFC+SNS'">
                 </div>
             </div>
         </section>
@@ -707,17 +708,23 @@
     <style>
       /* Personalización del Chat Widget a la identidad Borgoña/Rosa/Marfil/Ámbar */
       :root {
-        --chat--color--primary: #610f2f; /* Borgoña oscuro */
+        /* Base de colores del Widget de n8n */
+        --chat--color--primary: #8e1a48; /* Borgoña oscuro para cabeceras y globos de usuario */
         --chat--color--primary-shade-50: #7a153c; 
-        --chat--color--primary--shade-100: #8e1a48; /* Borgoña base */
-        --chat--color--secondary: #faaf0f; /* Ámbar/Amarillo TTCC */
+        --chat--color--primary--shade-100: #610f2f; 
+        --chat--color--secondary: #faaf0f; /* Ámbar/Amarillo TTCC para enviar */
         --chat--color-secondary-shade-50: #fce9b6; 
-        --chat--color-white: #f0dfcc; /* Marfil */
-        --chat--color-light: #7a153c; 
-        --chat--color-dark: #f0dfcc; 
-        --chat--toggle--background: #faaf0f; /* Botón en ámbar corporativo */
+        
+        /* Modificando los contrastes de los mensajes (Blanco puro y texto general) */
+        --chat--color-white: #ffffff; /* Obliga al fondo de los mensajes del bot a ser blanco puro */
+        --chat--color-light: #f8f9fa; /* Grises claros para la zona de escribir */
+        --chat--color-dark: #41081b; /* Borgoña casi negro para asegurar lectura en el bot */
+        
+        /* Botón de apertura del chat */
+        --chat--toggle--background: #faaf0f; 
         --chat--toggle--color: #41081b; 
       }
+      
       .chat-window {
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
         font-family: 'Inter', sans-serif;
